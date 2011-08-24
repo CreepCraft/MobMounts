@@ -15,7 +15,6 @@ public class MobMounts extends JavaPlugin{
 
 	  private final MobMountsPlayerListener playerListener = new MobMountsPlayerListener(this);
 	  private final MobMountsEntityListener entityListener = new MobMountsEntityListener(this);
-	  private final MobMountsVehicleListener vehicleListener = new MobMountsVehicleListener(this);
 	  public static final Logger log = Logger.getLogger("Minecraft");
 	  
 	    public Configuration config;
@@ -41,7 +40,6 @@ public class MobMounts extends JavaPlugin{
 	    	PluginManager pm = getServer().getPluginManager();
 			pm.registerEvent(Event.Type.PLAYER_INTERACT_ENTITY, playerListener, Event.Priority.Highest, this);	 
 			pm.registerEvent(Event.Type.ENTITY_TARGET, entityListener, Event.Priority.Highest, this);
-			pm.registerEvent(Event.Type.VEHICLE_ENTER, vehicleListener, Event.Priority.Highest, this);
 			config = getConfiguration();
 			config.setHeader("Here you can define the items that are required to mount the mobs onto you.");
 			Zombietame = config.getInt("Zombie tame item", 268);

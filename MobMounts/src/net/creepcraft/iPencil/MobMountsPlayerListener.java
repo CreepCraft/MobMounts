@@ -31,14 +31,6 @@ public class MobMountsPlayerListener extends PlayerListener {
 		Player p = event.getPlayer();
 		Entity mob = event.getRightClicked();
 		
-		
-		Inventory inv = p.getInventory();
-		
-		inv.addItem(10,Material.BRICK);
-		
-		Block blo = p.getTargetBlock(1, 3);
-		
-		
 		if (mob instanceof Zombie)
 		{	
 			if (event.getPlayer().getItemInHand().getTypeId() == plugin.Zombietame)
